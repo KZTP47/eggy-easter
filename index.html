@@ -3,35 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eggy Easter</title>
+    <title>Eggy Easter - Online Version</title>
     <style>
+        /* Basic CSS to make the iframe fill the entire window */
         body, html {
             margin: 0;
             padding: 0;
             overflow: hidden;
             height: 100vh;
             width: 100vw;
-            background-color: #1a1a1a;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        #flash-container {
-            width: 800px;
-            height: 600px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
         }
     </style>
 </head>
 <body>
 
-    <div id="flash-container">
-        <!-- The Ruffle emulator script will automatically find and replace this embed tag -->
-        <embed src="eggyeaster.swf" width="800" height="600"></embed>
-    </div>
-
-    <!-- This script loads the Ruffle emulator, which makes the SWF file playable -->
-    <script src="ruffle.js"></script>
+    <!-- 
+      This iframe loads the game directly from the Miniplay website.
+      The styles and attributes ensure it fills the entire application window.
+    -->
+    <iframe 
+        src='https://www.miniplay.com/embed/eggy-easter' 
+        style='width:100%;height:100%;' 
+        frameborder='0' 
+        allowfullscreen>
+    </iframe>
 
 </body>
 </html>
+
